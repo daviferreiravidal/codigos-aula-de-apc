@@ -1,0 +1,55 @@
+#Beecrowd 1071 Soma de impares consecutivos:
+
+def maior(x,y):
+    max = x
+    
+    if y > max:
+        max = y
+    
+    return max
+
+def menor(x,y):
+    min = x
+    
+    if y <min:
+        min = y
+    return min
+
+def somaimpares(x,y):
+    
+    if x == y:
+        num = 0
+        print(num)
+    else:
+            b = maior(x,y)
+            a = menor(x,y)
+            
+             
+            if a % 2 == 0:
+                num = (a+1)
+                
+                if num >= b:
+                    return 
+                else:
+                    print(num)
+                    somaimpares(num, b)
+            else:
+                num = (a+2)
+                
+                if num >= b:
+                    return 0
+                else:
+                    print(num)
+                    somaimpares(num, b)
+            
+            
+            somaimpares(x,y)
+            
+            
+            
+    
+x = int(input())
+y = int(input())
+
+somaimpares(x,y)
+    
